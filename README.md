@@ -7,7 +7,7 @@ Author -> Stefanos Ginargyros
 
 ## Introduction
 
-In 2019 Stack Overflow realeased a [public dataset](https://www.kaggle.com/datasets/stackoverflow/stacksample) in Kaggle, named 10% of Stack Overflow Q&A. Its a very quality dataset, including text from 10% of Stack Overflow questions and answers on programming topics. In this project we are automatically predicting the tags of the questions, utilizing a variety of `NLP` tools and models. This is one of the demanding classification problems since it incorporates at the same time multi-label (cardinality >2) and multi-class (>1) targets. Fortunatelly enough, we have fresh tools 🤗 and ideas/ papers attacking these kind of problems, given there is enough compute! 
+In 2019 Stack Overflow realeased a [public dataset](https://www.kaggle.com/datasets/stackoverflow/stacksample) (Kaggle), named 10% of Stack Overflow Q&A. Its a very quality dataset, including text from 10% of Stack Overflow questions and answers on programming topics. In this project we are automatically predicting the tags of the questions, utilizing a variety of `NLP` tools and models. This is one of the demanding classification problems since it incorporates at the same time multi-label (cardinality >2) and multi-class (>1) targets. Fortunatelly enough, we have fresh tools 🤗 and ideas/ papers attacking these kind of problems, given there is enough compute! 
 
 ## Dataset
 
@@ -27,6 +27,7 @@ So there are three ways of handling with the installation.
 -  `Locally`: You can install & run everything locally:
 
     ```bash
+        # dirs, folders etc.
         cd stackoverflow-tag-prediction
         mkdir /data
         mkdir /output
