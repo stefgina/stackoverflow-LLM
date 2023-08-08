@@ -20,32 +20,41 @@ The raw dataset by default is split in 3 CSV files:
 - `Tags.csv`: Includes ids, and tags for each question. Every question can be pointed by many tag ids. Its many to one as well.
 
 
-## Installation
+## Installation & Usage (Quick-commands)
 
-Okay so there are three ways of handling the installation process. 
+So there are three ways of handling with the installation. 
 
-- You can pip install everything and run `Locally` 
+-  `Locally`: You can install & run everything locally:
 
     ```bash
-        # install deps
+        # create the env & activate, install deps
+        conda create -n stackoverflow python=3.10
+        conda activate stackoverflow
         pip install -r requirements.txt
+
+        # runs exps
+        python3 eda.py
+        python3 model_A_train_infer.py
     ```
 
-- You can use the dockerfile of this repo and run everything through a `Container`. The commands for that would be:
+- `Docker`: You can build and run everything in auto, through my Docker image:
 
     ```bash
         # build the image
         docker build -t docker-eda-mlmodel -f Dockerfile .
+
+        # run exps
+        docker run docker-eda-mlmodel python3 eda.py
+        docker run docker-eda-mlmodel python3 model_A_train_infer.py 
     ```
 
-- Or you can skip completely any installation, and directy use my `Collab` notebooks and run the experiments. This includes training, finetuning and predicting utilizing a Large Language Model (BERT, distilBERT etc)
+- `Collab`: Or you can completely skip the installation, and directy use these collab notebooks and run the advanced LLM experiments on cloud GPU's. This includes training, finetuning and predicting utilizing a Large Language Model (BERT, distilBERT etc) on StackOverflow data.
 
     [bert_fine_stackoverflow_v6_train.ipynb](https://colab.research.google.com/drive/1IlNwHCM2rWZqZMNiByoGzAq-M7p2FWui?usp=sharing)
-
     [bert_fine_stackoverflow_v6_infer.ipynb](https://colab.research.google.com/drive/18JgKJEwGVjYK3QisDOOe1PkHKEA5Btyy?usp=sharing)
 
 
-## Usage Locally
+## Usage Locally (Detailed)
 Since you have installed all dependencies locally, this section will guide you through the experiments. Usually I choose to create conda virtual envs, when playing with new projects. So in this case:
 
 ```bash 
@@ -74,7 +83,7 @@ You will have to manually download the StackOverflow Dataset, if you go this way
     gdown --id 1u8PWLs_SqSq0SMBXZSIB1LG59oror_B7 -O data/Questions.csv
     gdown --id 1ooskIp7eb7QOMeK1yJxXE1KkZoDARdfW -O data/Tags.csv
 ```
-## Usage Docker
+## Usage Docker (Detailed)
 Don't stress about the Data, or the Dataset here, I have automated scripts downloading every part of the data you will need. Just run bellow lines:
 
 
@@ -88,7 +97,7 @@ Don't stress about the Data, or the Dataset here, I have automated scripts downl
     docker run docker-eda-mlmodel python3 model_A_train_infer.py 
 ```
 
-## Usage Collab 
+## Usage Collab (Detailed)
 
 Follow my links, log-in to Google, and then choose as your runtime a GPU. (if you are subscriber you can even pick an A100, if not just a Tesla T4 for a limited time).
 
