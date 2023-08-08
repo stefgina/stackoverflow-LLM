@@ -27,12 +27,21 @@ So there are three ways of handling with the installation.
 -  `Locally`: You can install & run everything locally:
 
     ```bash
+        cd stackoverflow-tag-prediction
+        mkdir /data
+        mkdir /output
+    
+        # fetch files from google drive, dump in dirs
+        gdown --id 1Udrd9a944rJH0GxDhR6052gGNksb7rXO -O data/df_eda.pkl
+        gdown --id 1u8PWLs_SqSq0SMBXZSIB1LG59oror_B7 -O data/Questions.csv
+        gdown --id 1ooskIp7eb7QOMeK1yJxXE1KkZoDARdfW -O data/Tags.csv
+
         # create the env & activate, install deps
         conda create -n stackoverflow python=3.10
         conda activate stackoverflow
-        pip install -r requirements.txt
 
         # runs exps
+        pip install -r requirements.txt
         python3 eda.py
         python3 model_A_train_infer.py
     ```
