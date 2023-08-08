@@ -66,8 +66,25 @@ So there are three ways of handling with the installation.
     [bert_fine_stackoverflow_v6_infer.ipynb](https://colab.research.google.com/drive/18JgKJEwGVjYK3QisDOOe1PkHKEA5Btyy?usp=sharing)
 
 
-## Usage Locally (Detailed)
-Since you have installed all dependencies locally, this section will guide you through the experiments. Usually I choose to create conda virtual envs, when playing with new projects. So in this case:
+## Installation & Usage Locally (Detailed)
+Since you want to install all the dependencies and run the exps locally, this section will guide you through step by step. The following directories are needed for the scripts to run locally. Every script is pointing to a data folder so you can either do the following (easy) or change the directories manually in the scripts.
+
+```bash
+    # dirs, folders etc.
+    cd stackoverflow-tag-prediction
+    mkdir /data
+    mkdir /output    
+```
+Bear in mind that you will have to manually download the dataset, if you go this way (locally). For your convience I have them uploaded and you can download them automatically with one simple script attached bellow. They will be extracted in the `-O` flag directory of the gdown command. For example I export them in the data folder (it must be an existing folder, from the previous step), since this is the folder all of the scripts are pointing.
+
+```bash
+    # fetch files from google drive
+    gdown --id 1Udrd9a944rJH0GxDhR6052gGNksb7rXO -O data/df_eda.pkl
+    gdown --id 1u8PWLs_SqSq0SMBXZSIB1LG59oror_B7 -O data/Questions.csv
+    gdown --id 1ooskIp7eb7QOMeK1yJxXE1KkZoDARdfW -O data/Tags.csv
+```
+
+Usually I choose to create conda virtual envs when playing with new projects, especially when i do it locally.
 
 ```bash 
     # create the env, and activate
@@ -75,7 +92,7 @@ Since you have installed all dependencies locally, this section will guide you t
     conda activate stackoverflow
 ```
 
-The basic usage locally is:
+And then you can run the EDA and ML [cpu] experiments on your machine. 
 
 ```bash
     # run eda on stack overflow data
@@ -87,18 +104,23 @@ The basic usage locally is:
     python3 model_A_train_infer.py 
 ```
 
-You will have to manually download the StackOverflow Dataset, if you go this way (locally). For your convience I have them uploaded and you can download them automatically with the following code. They will be extracted in the `-O` flag directory of the gdown command. For example I export them in the data folder (it must be an existing folder), since this is the folder all of my scripts are pointing.
+Of-course this is easily extendable, and you can still play arround with the more advanced LLM models as well (if you have GPUs, CUDA etc.).
 
 ```bash
-    # fetch files from google drive
-    gdown --id 1Udrd9a944rJH0GxDhR6052gGNksb7rXO -O data/df_eda.pkl
-    gdown --id 1u8PWLs_SqSq0SMBXZSIB1LG59oror_B7 -O data/Questions.csv
-    gdown --id 1ooskIp7eb7QOMeK1yJxXE1KkZoDARdfW -O data/Tags.csv
+    # predict tags  on stack overflow data, with a BERT finetuned model [gpu]
+    python3 model_B_tain.py
+    python3 model_B_infer.py
 ```
-## Usage Docker (Detailed)
-Don't stress about the Data, or the Dataset here, I have automated scripts downloading every part of the data you will need. Just run bellow lines:
 
 
+
+## Installation & Usage Docker (Detailed)
+Don't stress about the Data, or the Dataset here, I have automated scripts downloading every part of the data and making dirs where you need them. You will just need to run these three lines:
+
+```bash
+    # build the image
+    docker build -t docker-eda-mlmodel -f Dockerfile .
+```
 ```bash
     # run eda on stack overflow data
     docker run docker-eda-mlmodel python3 eda.py 
