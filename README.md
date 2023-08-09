@@ -219,7 +219,7 @@ Numerical Benchmarks on the 10% of Stack Overflow Q&A Dataset for all the tags m
 | LinearSVC     | 0.80141       | 0.4161        | 0.5478        | -             | 0.0108        | 0.3772                    | < 1 min (M1 Pro)      |
 | BERT          | 0.8367        | 0.4596        | 0.5933        | -             | 0.0099        | 0.4218                    | > 5 hours (Tesla T4)  |
 
-<!---
+
 ## Quantitative Benchmarks Frequent Tags Average:
 Numerical Benchmarks on the 10% of Stack Overflow Q&A Dataset for the top 10 tags. These tags in descending frequency order are: 
 ```
@@ -229,5 +229,5 @@ Numerical Benchmarks on the 10% of Stack Overflow Q&A Dataset for the top 10 tag
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | -------------     |-------------           |
 | LinearSVC     | 0.8002        | 0.5096        | 0.6194        | 1115.3        |  0.0411       | 0.4636            | < 1 min (M1 Pro)       |
 | BERT          | 0.8223        | 0.6647        | 0.7197        | 1115.3        | 0.0308        | 0.5875            | > 5 hours (Tesla T4)   |
---->
+
 
