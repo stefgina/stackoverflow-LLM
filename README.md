@@ -22,16 +22,13 @@ The raw dataset by default is split in 3 CSV files:
 
 ## Installation & Usage (Quick-commands)
 
-So there are three ways of handling with the installation. For all three you will have to first clone the repo:
-
-```bash
-    git clone https://github.com/stefgina/stackoverflow-tag-prediction.git
-```
+So there are three ways of handling with the installation.
 
 -  `Locally`: You can install & run everything locally:
 
     ```bash
-        # dirs, folders etc.
+        # go to your home dir
+        git clone https://github.com/stefgina/stackoverflow-tag-prediction.git
         cd stackoverflow-tag-prediction
         mkdir /data
         mkdir /output
@@ -59,6 +56,8 @@ So there are three ways of handling with the installation. For all three you wil
 - `Docker`: You can build and run everything in auto, through my Docker image in this repo:
 
     ```bash
+        # go to your home dir
+        git clone https://github.com/stefgina/stackoverflow-tag-prediction.git
         cd stackoverflow-tag-prediction
     
         # build the image
@@ -135,7 +134,9 @@ You have to get and install docker first. I recommend to install Docker Desktop 
 When you are finished with that, you can use docker from the terminal. Just run these 3 lines.
 
 ```bash
+    # go to your home dir clone repo
     # build the image
+    git clone https://github.com/stefgina/stackoverflow-tag-prediction.git
     cd stackoverflow-tag-prediction
     docker build -t docker-eda-mlmodel -f Dockerfile .
 ```
@@ -233,7 +234,7 @@ Numerical Benchmarks on the 10% of Stack Overflow Q&A Dataset for all the tags m
 ## Quantitative Benchmarks Frequent Tags Average:
 Numerical Benchmarks on the 10% of Stack Overflow Q&A Dataset for the top 10 tags. These tags in descending frequency order are: 
 ```
-    [javascript,java, c#, php, android, jquery, python, html, c++, ios ]
+    [javascript, java, c#, php, android, jquery, python, html, c++, ios ]
 ```
 | MODEL         | Precision     | Recall          |F-1          | True-Count    |Hamming Loss    |Jaccard score     | ~Time                  |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | -------------     |-------------           |
