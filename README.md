@@ -183,7 +183,7 @@ The structure of the project follows classic NLP pipelines:
     - Metrics (micro-avg & tag frequent)
 
 
-# Project Results 
+# Qualitative Findings 
 Some interesting findings can be obtained through the Exploratory Data Analysis step [`eda.py`] and the [`model_A_train_infer.py`] for the ML[cpu] model.
 
 - Through the EDA, the part that stand out to me are the frequencies of the tags plotted. 
@@ -211,7 +211,7 @@ Some interesting findings can be obtained through the Exploratory Data Analysis 
 
 
 
-## Numerical Benchmarks Micro-Average:
+## Quantitative Benchmarks Micro-Average:
 Numerical Benchmarks on the 10% of Stack Overflow Q&A Dataset for all the tags micro-averaged. Both of the models where fed the exact same input data, and tested on the exact same test-set. The dataset got carefully splitted in both cases 72% train, 8% validation and 20% test (while cross cheked the label distributions before and after the split in both cases).
 
 | MODEL         | Precision     | Recall          |F-1          | True-Count    |Hamming Loss    |Jaccard score             | ~Time                 |
@@ -220,7 +220,7 @@ Numerical Benchmarks on the 10% of Stack Overflow Q&A Dataset for all the tags m
 | BERT          | 0.8367        | 0.4596        | 0.5933        | -             | 0.0099        | 0.4218                    | > 5 hours (Tesla T4)  |
 
 
-## Numerical Benchmarks Frequent Tags AVG:
+## Quantitative Benchmarks Frequent Tags Average:
 Numerical Benchmarks on the 10% of Stack Overflow Q&A Dataset for the top 10 tags. These tags in descending frequency order are: 
 ```
     [javascript,java, c#, php, android, jquery, python, html, c++, ios ]
