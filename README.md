@@ -80,6 +80,7 @@ Bear in mind that you will have to manually download the dataset, if you go this
 
 ```bash
     # fetch files from google drive
+    pip install gdown
     gdown --id 1Udrd9a944rJH0GxDhR6052gGNksb7rXO -O data/df_eda.pkl
     gdown --id 1u8PWLs_SqSq0SMBXZSIB1LG59oror_B7 -O data/Questions.csv
     gdown --id 1ooskIp7eb7QOMeK1yJxXE1KkZoDARdfW -O data/Tags.csv
