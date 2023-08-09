@@ -49,7 +49,7 @@ So there are three ways of handling with the installation.
         python3 model_A_train_infer.py
 
         # you will also need cuda, torch and transformers for these (BERT)
-        python3 model_B_tain.py
+        python3 model_B_train.py
         python3 model_B_infer.py
     ```
 
@@ -121,7 +121,7 @@ You can play arround with the more advanced LLM models as well. In order to run 
 
 ```bash
     # predict tags  on stack overflow data, with a BERT finetuned model [gpu]
-    python3 model_B_tain.py
+    python3 model_B_train.py
     python3 model_B_infer.py
 ```
 
