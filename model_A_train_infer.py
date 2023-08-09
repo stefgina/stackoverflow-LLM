@@ -194,7 +194,7 @@ print(metrics_per_tag)
 ################################ METRICS ON TOP TEN TAGS
 top_ten_tags = ["javascript", "java", "c#", "php", "android", "jquery", "python", "html", "c++", "ios"]
 print(metrics_per_tag[top_ten_tags])
-print(metrics_per_tag[top_ten_tags].apply(np.mean, axis=0))
+print(metrics_per_tag[top_ten_tags].apply(np.mean, axis=1))
 
 
 ################################ MICRO-AVG PRECISION/RECALL
