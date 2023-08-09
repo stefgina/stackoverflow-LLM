@@ -80,7 +80,8 @@ So there are three ways of handling with the installation.
 Since you want to install all the dependencies and run the exps locally, this section will guide you through step by step. The following directories are needed for the scripts to run locally. Every script is pointing to a data folder so you can either do the following (easy) or change the directories manually in the scripts.
 
 ```bash
-    # dirs, folders etc.
+    # clone, dirs, folders etc.
+    git clone https://github.com/stefgina/stackoverflow-tag-prediction.git
     cd stackoverflow-tag-prediction
     mkdir /data
     mkdir /output    
