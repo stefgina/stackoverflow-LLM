@@ -41,9 +41,9 @@ So there are three ways of handling with the installation.
         # create the env & activate, install deps
         conda create -n stackoverflow python=3.10
         conda activate stackoverflow
+        pip install -r requirements.txt
 
         # runs exps
-        pip install -r requirements.txt
         python3 eda.py
         python3 model_A_train_infer.py
     ```
@@ -92,6 +92,7 @@ Usually I choose to create conda virtual envs when playing with new projects, es
     # create the env, and activate
     conda create -n stackoverflow python=3.10
     conda activate stackoverflow
+    pip install -r requirements.txt
 ```
 
 And then you can run the EDA and ML [cpu] experiments on your machine. 
