@@ -22,7 +22,11 @@ The raw dataset by default is split in 3 CSV files:
 
 ## Installation & Usage (Quick-commands)
 
-So there are three ways of handling with the installation. 
+So there are three ways of handling with the installation. For all three you will have to first clone the repo:
+
+```bash
+    git clone https://github.com/stefgina/stackoverflow-tag-prediction.git
+```
 
 -  `Locally`: You can install & run everything locally:
 
@@ -42,7 +46,6 @@ So there are three ways of handling with the installation.
         conda create -n stackoverflow python=3.10
         conda activate stackoverflow
         
-
         # runs exps
         pip install -r requirements.txt
         python3 eda.py
@@ -56,6 +59,8 @@ So there are three ways of handling with the installation.
 - `Docker`: You can build and run everything in auto, through my Docker image in this repo:
 
     ```bash
+        cd stackoverflow-tag-prediction
+    
         # build the image
         docker build -t docker-eda-mlmodel -f Dockerfile .
 
@@ -112,7 +117,7 @@ And then you can run the EDA and ML [cpu] experiments on your machine.
     python3 model_A_train_infer.py 
 ```
 
-You can also play arround with the more advanced LLM models as well (if you have GPUs, CUDA etc.). In order to run these you will have to you have to also install cuda, torch (gpu) and transformers deps. Didn't include these in the requirements since it is more advanced. (You can always still run these in Collab without doing any of that, see Collab section)
+You can play arround with the more advanced LLM models as well. In order to run these you will you have to also have an Nvidia GPU, installed CUDA, Pytorch (gpu) and transformers deps. You can always run these advanced models in Google Collab -instead of locally- without any of the previous requirements.
 
 ```bash
     # predict tags  on stack overflow data, with a BERT finetuned model [gpu]
@@ -122,11 +127,16 @@ You can also play arround with the more advanced LLM models as well (if you have
 
 
 
-## Installation & Usage Docker (Detailed)
-Don't stress about the Data, or the Dataset here, I have automated scripts downloading every part of the data and making dirs where you need them. You will just need to run these three lines:
+## Installation & Usage Docker (Detailed) [Recommended] [CPU]
+Here the process is simple. There are already scripts inside the Docker container automating things like data-downloading, making dirs and installing the necessary deps. 
+
+You have to get and install docker first. I recommend to install Docker Desktop which includes everything inside in a single binary. You do that  [here](https://www.docker.com/products/docker-desktop/).
+
+When you are finished with that, you can use docker from the terminal. Just run these 3 lines.
 
 ```bash
     # build the image
+    cd stackoverflow-tag-prediction
     docker build -t docker-eda-mlmodel -f Dockerfile .
 ```
 ```bash
@@ -139,7 +149,7 @@ Don't stress about the Data, or the Dataset here, I have automated scripts downl
     docker run docker-eda-mlmodel python3 model_A_train_infer.py 
 ```
 
-## Usage Collab (Detailed)
+## Usage Collab (Detailed) [Recommended] [GPU]
 
 Follow my links, log-in to Google, and then choose as your runtime a GPU. (if you are subscriber you can even pick an A100, if not just a Tesla T4 for a limited time).
 
