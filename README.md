@@ -183,7 +183,7 @@ The structure of the project follows classic NLP pipelines:
     - Metrics (micro-avg & tag frequent)
 
 
-# Qualitative Findings 
+## Qualitative Findings 
 Some interesting findings can be obtained through the Exploratory Data Analysis step [`eda.py`] and the [`model_A_train_infer.py`] for the ML[cpu] model.
 
 - Through the EDA, the part that stand out to me are the frequencies of the tags plotted. 
