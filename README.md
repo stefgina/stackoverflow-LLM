@@ -184,7 +184,7 @@ Some interesting findings can be obtained through the Exploratory Data Analysis 
     
     <img src="images/freq-tags.png" alt="drawing" width="480"/>
 
-- Here are the distribution of plots `Before` (full dataset) and `After` the train/test split. In a) bars, and b) curves:
+- Here is the distribution of tags `Before` the train/test split and `After` the train/test split. We are ensuring it remains the same. In a) bars, and b) plots:
 
 
     <img src="images/bar_distr.png" alt="drawing" width="480"/>
