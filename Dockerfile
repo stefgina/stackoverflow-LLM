@@ -24,7 +24,7 @@ RUN gdown --id 1ooskIp7eb7QOMeK1yJxXE1KkZoDARdfW -O data/Tags.csv
 # place scripts in container
 COPY eda.py ./eda.py
 COPY model_A_train_infer.py ./model_A_train_infer.py
-COPY model_B_tain.py ./model_B_tain.py
+COPY model_B_train.py ./model_B_train.py
 COPY model_B_infer.py ./model_B_infer.py
 
 # place requirements in container
