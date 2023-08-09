@@ -221,7 +221,24 @@ Some interesting findings can be obtained through the Exploratory Data Analysis 
 
     <img src="images/roc_all.png" alt="drawing" width="480"/>
 
+## Quantitative Evaluation methodology
 
+Multi-Label & Multi-Class problems can be approached via One vs Many type of classifiers, or even better MultiOutputClassifiers. The differences are kind of delicate and very nicely explained in this [article](https://scikit-learn.org/stable/modules/multiclass.html) from Scikit-Learn.
+
+
+A much-used loss function for these type of problems (multi-label & multi-class) is [Hamming Loss](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.hamming_loss.html):
+
+$$ hamming = {{1 \over N*L} \sum_{i=1}^N \sum_{j=1}^L y_{ij} \oplus y'_{ij}} $$
+
+$$ N: samples $$
+
+$$ L: classes $$
+
+Another usefull metric widely used for multi-label is [Jaccard Score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html):
+
+$$ jaccard = true_positives \over true_positives + false_positives + false_negatives $$
+
+​
 
 ## Quantitative Benchmarks Micro-Average:
 Numerical Benchmarks on the 10% of Stack Overflow Q&A Dataset for all the tags micro-averaged. Both of the models where fed the exact same input data, and tested on the exact same test-set. The dataset got carefully splitted in both cases 72% train, 8% validation and 20% test (while cross cheked the label distributions before and after the split in both cases).
