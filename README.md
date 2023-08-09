@@ -41,13 +41,14 @@ So there are three ways of handling with the installation.
         # create the env & activate, install deps
         conda create -n stackoverflow python=3.10
         conda activate stackoverflow
-        pip install -r requirements.txt
+        
 
-        # runs exps 
+        # runs exps
+        pip install -r requirements.txt
         python3 eda.py
         python3 model_A_train_infer.py
 
-        # you will need cuda, torch and transformers for these (BERT)
+        # you will also need cuda, torch and transformers for these (BERT)
         python3 model_B_tain.py
         python3 model_B_infer.py
     ```
@@ -111,7 +112,7 @@ And then you can run the EDA and ML [cpu] experiments on your machine.
     python3 model_A_train_infer.py 
 ```
 
-Of-course this is easily extendable, and you can still play arround with the more advanced LLM models as well (if you have GPUs, CUDA etc.).
+You can also play arround with the more advanced LLM models as well (if you have GPUs, CUDA etc.). In order to run these you will have to you have to also install cuda, torch (gpu) and transformers deps. Didn't include these in the requirements since it is more advanced. (You can always still run these in Collab without doing any of that, see Collab section)
 
 ```bash
     # predict tags  on stack overflow data, with a BERT finetuned model [gpu]
