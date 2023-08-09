@@ -300,4 +300,4 @@ top_ten_tags = ["javascript", "java", "c#", "php", "android", "jquery", "python"
 print("[INFO]: computing top-ten tag metrics")
 print(metrics_per_tag[top_ten_tags])
 print("[INFO]: computing top-ten tag metrics averaged")
-print(metrics_per_tag[top_ten_tags].apply(np.mean, axis=0))
+print(metrics_per_tag[top_ten_tags].apply(np.mean, axis=1))
