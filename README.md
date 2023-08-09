@@ -33,6 +33,7 @@ So there are three ways of handling with the installation.
         mkdir /output
     
         # fetch files from google drive, dump in dirs
+        pip install gdown
         gdown --id 1Udrd9a944rJH0GxDhR6052gGNksb7rXO -O data/df_eda.pkl
         gdown --id 1u8PWLs_SqSq0SMBXZSIB1LG59oror_B7 -O data/Questions.csv
         gdown --id 1ooskIp7eb7QOMeK1yJxXE1KkZoDARdfW -O data/Tags.csv
@@ -208,8 +209,8 @@ Numerical Benchmarks on the 10% of Stack Overflow Q&A Dataset for all the tags m
 
 | MODEL         | Precision     | Recall          |F-1          | True-Count    |Hamming Loss    |Jaccard score             | ~Time                 |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | -------------             |-------------          |
-| LinearSVC     | 0.80141       | 0.4161        | 0.5478        | 0.9292        | 0.0108        | 0.3772                    | < 1 min (M1 Pro)      |
-| BERT          | 0.8367        | 0.4596        | 0.5933        | 0.0099        | 0.0039        | 0.4218                    | > 5 hours (Tesla T4)  |
+| LinearSVC     | 0.80141       | 0.4161        | 0.5478        | -             | 0.0108        | 0.3772                    | < 1 min (M1 Pro)      |
+| BERT          | 0.8367        | 0.4596        | 0.5933        | -             | 0.0099        | 0.4218                    | > 5 hours (Tesla T4)  |
 
 
 ## Numerical Benchmarks Frequent Tags AVG:
