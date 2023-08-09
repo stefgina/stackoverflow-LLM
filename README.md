@@ -43,9 +43,13 @@ So there are three ways of handling with the installation.
         conda activate stackoverflow
         pip install -r requirements.txt
 
-        # runs exps
+        # runs exps 
         python3 eda.py
         python3 model_A_train_infer.py
+
+        # you will need cuda, torch and transformers for these (BERT)
+        python3 model_B_tain.py
+        python3 model_B_infer.py
     ```
 
 - `Docker`: You can build and run everything in auto, through my Docker image in this repo:
