@@ -1,4 +1,4 @@
-# Tag Prediction Stack Overflow (NLP)
+# Tag Prediction Stack Overflow (LLM)
 ```python
 Author -> Stefanos Ginargyros
 ```
