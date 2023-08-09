@@ -236,7 +236,7 @@ $$ L: classes $$
 
 Another usefull metric widely used for multi-label is [Jaccard Score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html):
 
-$$ jaccard = true_positives \over true_positives + false_positives + false_negatives $$
+$$ jaccard = {true_positives \over true_positives + false_positives + false_negatives} $$
 
 ​
 
