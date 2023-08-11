@@ -30,8 +30,8 @@ So there are three ways of handling with the installation.
         # go to your home dir
         git clone https://github.com/stefgina/stackoverflow-tag-prediction.git
         cd stackoverflow-tag-prediction
-        mkdir /data
-        mkdir /output
+        mkdir data
+        mkdir output
     
         # create the env & activate, install deps
         conda create -n stackoverflow python=3.10
@@ -83,8 +83,8 @@ Since you want to install all the dependencies and run the exps locally, this se
     # clone, dirs, folders etc.
     git clone https://github.com/stefgina/stackoverflow-tag-prediction.git
     cd stackoverflow-tag-prediction
-    mkdir /data
-    mkdir /output    
+    mkdir data
+    mkdir output    
 ```
 
 
