@@ -223,7 +223,7 @@ Some interesting findings can be obtained through the Exploratory Data Analysis 
 
 ## Quantitative Evaluation methodology
 
-Multi-Label & Multi-Class problems can be approached via One vs Many type of classifiers, or even better MultiOutputClassifiers. The differences are kind of delicate and very nicely explained in this [article](https://scikit-learn.org/stable/modules/multiclass.html) from Scikit-Learn.
+Multi-Label & Multi-Class problems can be approached via OneVsRest type of classifiers, or even better MultiOutputClassifiers. The differences are kind of delicate and very nicely explained in this [article](https://scikit-learn.org/stable/modules/multiclass.html) from Scikit-Learn.
 
 
 A much-used loss function for these type of problems (multi-label & multi-class) is [Hamming Loss](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.hamming_loss.html):
