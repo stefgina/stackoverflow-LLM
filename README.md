@@ -33,15 +33,15 @@ So there are three ways of handling with the installation.
         mkdir /data
         mkdir /output
     
+        # create the env & activate, install deps
+        conda create -n stackoverflow python=3.10
+        conda activate stackoverflow
+
         # fetch files from google drive, dump in dirs
         pip install gdown
         gdown --id 1Udrd9a944rJH0GxDhR6052gGNksb7rXO -O data/df_eda.pkl
         gdown --id 1u8PWLs_SqSq0SMBXZSIB1LG59oror_B7 -O data/Questions.csv
         gdown --id 1ooskIp7eb7QOMeK1yJxXE1KkZoDARdfW -O data/Tags.csv
-
-        # create the env & activate, install deps
-        conda create -n stackoverflow python=3.10
-        conda activate stackoverflow
         
         # runs exps
         pip install -r requirements.txt
@@ -86,15 +86,7 @@ Since you want to install all the dependencies and run the exps locally, this se
     mkdir /data
     mkdir /output    
 ```
-Bear in mind that you will have to manually download the dataset, if you go this way (locally). For your convience I have them uploaded and you can download them automatically with one simple script attached bellow. They will be extracted in the `-O` flag directory of the gdown command. For example I export them in the data folder (it must be an existing folder, from the previous step), since this is the folder all of the scripts are pointing.
 
-```bash
-    # fetch files from google drive
-    pip install gdown
-    gdown --id 1Udrd9a944rJH0GxDhR6052gGNksb7rXO -O data/df_eda.pkl
-    gdown --id 1u8PWLs_SqSq0SMBXZSIB1LG59oror_B7 -O data/Questions.csv
-    gdown --id 1ooskIp7eb7QOMeK1yJxXE1KkZoDARdfW -O data/Tags.csv
-```
 
 Usually I choose to create conda virtual envs when playing with new projects, especially when i do it locally.
 
@@ -103,6 +95,16 @@ Usually I choose to create conda virtual envs when playing with new projects, es
     conda create -n stackoverflow python=3.10
     conda activate stackoverflow
     pip install -r requirements.txt
+```
+
+Bear in mind that you will have to manually download the dataset, if you go this way (locally). For your convience I have them uploaded and you can download them automatically with one simple script attached bellow. They will be extracted in the `-O` flag directory of the gdown command. For example I export them in the data folder (it must be an existing folder, from the previous step), since this is the folder all of the scripts are pointing.
+
+```bash
+    # fetch files from google drive
+    pip install gdown
+    gdown --id 1Udrd9a944rJH0GxDhR6052gGNksb7rXO -O data/df_eda.pkl
+    gdown --id 1u8PWLs_SqSq0SMBXZSIB1LG59oror_B7 -O data/Questions.csv
+    gdown --id 1ooskIp7eb7QOMeK1yJxXE1KkZoDARdfW -O data/Tags.csv
 ```
 
 And then you can run the EDA and ML [cpu] experiments on your machine. 
