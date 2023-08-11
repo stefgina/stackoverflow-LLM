@@ -198,7 +198,7 @@ The structure of the project follows classic NLP pipelines:
 
 
 ## Qualitative Findings 
-Some interesting findings can be obtained through the Exploratory Data Analysis step [`eda.py`] and the [`model_A_train_infer.py`] for the ML[cpu] model.
+Some interesting findings can be obtained through the Exploratory Data Analysis step [`eda.py`] and the [`model_A_train_infer.py`] for the ML[cpu] model. (model B is only analyzed quantitatively, in the next section)
 
 - Through the EDA, the part that stand out to me are the frequencies of the tags plotted. 
     
@@ -258,7 +258,7 @@ Numerical Benchmarks on the 10% of Stack Overflow Q&A Dataset for the top 10 tag
 ```
 | MODEL         | Precision     | Recall          |F-1          | True-Count    |Hamming Loss    |Jaccard score     | ~Time                  |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | -------------     |-------------           |
-| LinearSVC     | 0.8002        | 0.5096        | 0.6194        | 1115.3        |  0.0411       | 0.4636            | < 1 min (M1 Pro)       |
-| BERT          | 0.8223        | 0.6647        | 0.7197        | 1115.3        | 0.0308        | 0.5875            | > 5 hours (Tesla T4)   |
+| LinearSVC     | 0.8002        | 0.5096        | 0.6194        | -             |    0.0411     | 0.4636            | < 1 min (M1 Pro)       |
+| BERT          | 0.8223        | 0.6647        | 0.7197        | -             | 0.0308        | 0.5875            | > 5 hours (Tesla T4)   |
 
 
