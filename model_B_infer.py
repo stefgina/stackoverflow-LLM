@@ -5,12 +5,18 @@
 # !pip install pandas
 # !pip install transformers
 # !pip install torch
+
+
+# this script assumes that you already have downloaded the files from drive
+# model weights, and the processed after EDA dataframe.
+# in case you didn't these are the links (care the dirs!)
+
 # !pip install gdown
 # !gdown --id 1--p20cXTZvk57GvPTxPmoylPtImvh0Vf # best_model.pt from google drive
 # !gdown --id 1Udrd9a944rJH0GxDhR6052gGNksb7rXO # df_eda.pkl from google drive
 
 
-########################################### INFERENCE SCRIPT ###########################################
+############################### IMPORTS
 from sklearn.metrics import hamming_loss
 from sklearn.metrics import jaccard_score
 from sklearn.metrics import precision_recall_fscore_support as score
