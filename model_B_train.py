@@ -274,7 +274,6 @@ def train_model(start_epochs,  n_epochs, valid_loss_min_input,
             outputs = model(ids, mask, token_type_ids)
             optimizer.zero_grad()
             loss = loss_fn(outputs, targets)
-            optimizer.zero_grad()
             loss.backward()
             optimizer.step()
             train_loss = train_loss + ((1 / (batch_idx + 1)) * (loss.item() - train_loss))
