@@ -33,7 +33,7 @@ So there are three ways of handling with the installation.
         mkdir data
         mkdir output
     
-        # create the env & activate, install deps
+        # create the env & activate, install deps 
         conda create -n stackoverflow python=3.10
         conda activate stackoverflow
 
@@ -155,7 +155,7 @@ When you are finished with that, you can use docker from the terminal. Just run 
 
 ## Usage Collab (Detailed) [Recommended] [GPU]
 
-Follow my links, log-in to Google, and then choose as your runtime a GPU. (if you are subscriber you can even pick an A100, if not just a Tesla T4 for a limited time).
+Follow my links, log-in to Google, and then choose as your runtime a GPU. (if you are subscriber you can even pick an A100, if not just a Tesla T4 for a limited time). I use transfomers>=4, but the code can work with 3 as well.
 
 [bert_fine_stackoverflow_v6_train.ipynb](https://colab.research.google.com/drive/1IlNwHCM2rWZqZMNiByoGzAq-M7p2FWui?usp=sharing)
 
