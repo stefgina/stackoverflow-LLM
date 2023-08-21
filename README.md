@@ -97,7 +97,7 @@ Usually I choose to create conda virtual envs when playing with new projects, es
     pip install -r requirements.txt
 ```
 
-Bear in mind that you will have to manually download the dataset, if you go this way (locally). For your convience I have them uploaded and you can download them automatically with one simple script attached bellow. They will be extracted in the `-O` flag directory of the gdown command. For example I export them in the data folder (it must be an existing folder, from the previous step), since this is the folder all of the scripts are pointing.
+Bear in mind that you will have to manually download the dataset, if you go this way (locally). For your convience I have them uploaded and you can download them automatically with the script attached bellow. They will be extracted in the `-O` flag directory of the gdown command. For example I export them in the data folder (it must be an existing folder, from the previous step), since this is the folder all of the scripts are pointing.
 
 ```bash
     # fetch files from google drive
