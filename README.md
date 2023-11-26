@@ -173,7 +173,7 @@ The structure of the project follows classic NLP pipelines:
     - Target Distribution
     - Loseless Dataset Shrinking (as possible)
     - Text Length Outliers (huge texts, encodings)
-    - Stip Html (beatiful soup)
+    - Strip Html (beatiful soup)
     - Accented characters
     - Special characters 
     - Lemmatization (playing, player -> play)
